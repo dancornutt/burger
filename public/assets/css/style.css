@@ -1,0 +1,32 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+body {
+  background-color: rgba(243, 186, 0, 0.918);
+}
+
+img {
+  size: 200px;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}

@@ -4,6 +4,10 @@ li {
   background: #faebd7;
 }
 
+header {
+  text-align: center;
+}
+
 body {
   background-color: rgba(243, 186, 0, 0.918);
 }

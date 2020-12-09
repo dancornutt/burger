@@ -9,25 +9,17 @@ const orm = {
       });
     },
     insertOne: function(burgerName, cb) {
-    let qry = "INSERT INTO burgers (burger_name) ?;";
-      connection.query(qry, burgerName, function(err, result) {
+    let qry = "INSERT INTO burgers (burger_name, devoured) VALUES (?, ?);";
+      connection.query(qry, [burgerName, false], function(err, result) {
         if (err) throw err;
         cb(result);
       });
     },
     updateOne: function(id, devoured, cb) {
         let qry =
-        "UPDATE burgers SET ? WHERE ?;";
+        "UPDATE burgers SET devoured = 1 WHERE id = ?;";
   
-      connection.query(
-        qry,[
-            {
-                devoured: devoured 
-            },
-            {
-                id: id
-            }
-        ],
+      connection.query(qry,[id],
         function(err, result) {
           if (err) throw err;
           cb(result);
